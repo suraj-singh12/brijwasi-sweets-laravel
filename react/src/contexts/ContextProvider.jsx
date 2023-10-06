@@ -15,10 +15,16 @@ export const ContextProvider = ({children}) => {
         localStorage.getItem('ACCESS_TOKEN')
         );
 
-    const setToken = () => {
+    const setToken = (token) => {
         _setToken(token);
-        if(token) localStorage.setItem('ACCESS_TOKEN', token);
-        else localStorage.removeItem('ACCESS_TOKEN');
+        if(token) {
+            localStorage.setItem('ACCESS_TOKEN', token);
+            console.log('here settingToken')
+        }
+        else {
+            localStorage.removeItem('ACCESS_TOKEN');
+            console.log('erasing token');
+        }
     }
     return (
         <StateContext.Provider value={{
