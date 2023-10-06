@@ -1,0 +1,5 @@
+after changing mysql db to sqlite
+    php artisan migrate
+    php artisan serve (to check everything's working fine)
+then stop above &
+    npm create vite
