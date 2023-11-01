@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display&family=Space+Mono&family=Young+Serif&display=swap');
+
+.card {
+  background-color: #FFF;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 1.5rem;
+  margin: auto auto 1rem;
+  width: 90%;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.7rem;
+
+  /*font-family: 'Playfair Display', serif;*/
+  /*font-family: 'Space Mono', monospace;*/
+  /*font-family: 'Young Serif', serif;*/
+}
+
+.card p {
+  font-size: 1.4rem;
+}
+.card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 200px;
+}

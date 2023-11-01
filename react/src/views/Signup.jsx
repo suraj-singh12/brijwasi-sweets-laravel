@@ -20,14 +20,13 @@ export default function Signup() {
             password: passwordRef.current.value,
             password_confirmation: passwordConfirmationRef.current.value,
         }
-        console.log(payload);
 
         axiosClient.post('/signup', payload)
         .then( ({data}) => {
+            data.user.name = data.user.name.charAt(0).toUpperCase() + data.user.name.slice(1);
             setUser(data.user);
             setToken(data.token);
             setErrors(null);
-            // console.log(data);
         })
         .catch( err => {
             const response = err.response;

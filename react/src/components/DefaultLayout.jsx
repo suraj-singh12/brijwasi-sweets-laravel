@@ -28,20 +28,39 @@ export default function DefaultLayout() {
       })
   }, [])
 
+  const styles = {
+    icon: {
+      fontSize: '30px',
+      fontWeight: 'bold',
+      color: 'white',
+      padding: '10px',
+      backgroundColor: '#325ca8',
+      borderRadius: '10px',
+      margin: '10px'
+    },
+    button: {
+      margin: '10px',
+      backgroundColor: '#bfe369',
+      borderRadius: '10px',
+      padding: '10px',
+    }
+  }
+
+
   return (
     <div id="defaultLayout">
-        <aside>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/users">Users</Link>
-        </aside>
+        {/*<aside>*/}
+            {/*<Link to="/dashboard">Dashboard</Link>*/}
+            {/*<Link to="/users">Users</Link>*/}
+        {/*</aside>*/}
         <div className="content">
             <header>
-                <div>
-                    Header
+                <div style={styles.icon}>
+                    Brijwasi Sweets
                 </div>
                 <div>
-                    {user.name}
-                    <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
+                  <span style={styles.button}>Hii, {user.name}</span>
+                  <a href="#" className="btn-logout" onClick={onLogout}>Logout</a>
                 </div>
             </header>
             <main>
