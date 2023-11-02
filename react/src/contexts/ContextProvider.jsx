@@ -47,3 +47,11 @@ export const ContextProvider = ({children}) => {
 }
 
 export const useStateContext = () => useContext(StateContext);
+
+/**
+ * StateContext is exported so that it can be used by components to access the context
+ *
+ * ContextProvider is exported as a component that wraps the whole application & provides the context's values & functions
+ * to the component within the application.
+ * It accepts the children prop to render the child components
+ */

@@ -4,7 +4,6 @@ import axiosClient from "../axios-client.js";
 import {useStateContext} from "../contexts/ContextProvider.jsx";
 
 export default function login() {
-
   const emailRef = useRef();
   const passwordRef = useRef();
   const {setUser, setToken} = useStateContext();

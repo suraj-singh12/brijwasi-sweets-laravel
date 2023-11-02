@@ -6,9 +6,10 @@ const axiosClient = axios.create({
 
 // Add a request interceptor (will be called before each request)
 axiosClient.interceptors.request.use((config) => {
-    const token = localStorage.getItem('ACCESS_TOKEN');
-    config.headers.Authorization = `Bearer ${token}`;
-    return config;
+  const token = localStorage.getItem('ACCESS_TOKEN');
+  // console.log('interceptor token', token);
+  config.headers.Authorization = `Bearer ${token}`;
+  return config;
 });
 
 
