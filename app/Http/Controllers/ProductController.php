@@ -22,8 +22,9 @@ class ProductController extends Controller
         $product = new Product([
           'name' => $jsonData['name'],
           'type' => $jsonData['type'],
-          'image' => $jsonData['image']
+          'image' => $jsonData['image'],
         ]);
+//        return response()->json(['message' => $jsonData], 200);
         $product->save();
 
         return response()->json(['message' => 'Product added to the product table'], 201);
