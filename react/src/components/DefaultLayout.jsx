@@ -1,15 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Navigate, Outlet } from 'react-router-dom'
 import { useStateContext } from '../contexts/ContextProvider'
 import axiosClient from "../axios-client.js";
 import Header from './Header.jsx';
+import axios from 'axios';
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import OwlCarousel from 'react-owl-carousel';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function DefaultLayout() {
   const { user, setUser, token, setToken, notification } = useStateContext();
+  const [products, setProducts] = useState([]);
+  const [banners, setBanners] = useState([]);
 
   if (!token) {
     return <Navigate to="/login" />
@@ -33,6 +36,20 @@ export default function DefaultLayout() {
       })
   }, [])
 
+  useEffect(() => {
+    axios.get('http://127.0.0.1:8000/api/products/')
+      .then(({ data }) => {
+        setProducts(data);
+        console.log("products: ", data);
+        return data;
+      })
+      .then((data) => {
+        const banners = data.filter((item) => (item.name === 'Brijwasi'));
+        setBanners(banners);
+        console.log("banners: ", banners);
+      });
+  }, []);
+
   const styles = {
     icon: {
       fontSize: '30px',
@@ -51,62 +68,38 @@ export default function DefaultLayout() {
     }
   }
 
-  const options = {
-    loop: true,
-    margin: 2,
-    lazyLoad: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    items: 1,
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
-  }
-
   return (
     <div id="defaultLayout">
-
       <div className="content">
         <Header />
         <main>
-          <OwlCarousel style={{width: "95vw", margin: 'auto'}} className='owl-theme' {...options} nav>
-            <div class='item' style={{width: "90%", border: "1px solid black", textAlign: 'center', margin: 'auto'}}>
-              <h4>1</h4>
-            </div>
-            <div class='item'>
-              <h4>2</h4>
-            </div>
-            <div class='item'>
-              <h4>3</h4>
-            </div>
-            <div class='item'>
-              <h4>4</h4>
-            </div>
-            <div class='item'>
-              <h4>5</h4>
-            </div>
-            <div class='item'>
-              <h4>6</h4>
-            </div>
-            <div class='item'>
-              <h4>7</h4>
-            </div>
-            <div class='item'>
-              <h4>8</h4>
-            </div>
-            <div class='item'>
-              <h4>9</h4>
-            </div>
-            <div class='item'>
-              <h4>10</h4>
-            </div>
-            <div class='item'>
-              <h4>11</h4>
-            </div>
-            <div class='item'>
-              <h4>12</h4>
-            </div>
-          </OwlCarousel>
-          <Outlet />
+          <Carousel>
+            <Carousel.Item>
+              <img src="/public/images/milk_cake.png" text="First slide" style={{width: 'auto', height: '200px'}} />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src="/public/images/kesar.jpg" text="Second slide" />
+              <Carousel.Caption>
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src="/public/images/soan_papdi.png" text="Third slide" />
+              <Carousel.Caption>
+                <h3>Third slide label</h3>
+                <p>
+                  Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+
+          {/* <Outlet /> */}
         </main>
       </div>
       {notification &&
