@@ -32,5 +32,7 @@ Route::post('/signup', [AuthController::class, 'signup']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('products', [ProductController::class, 'index']);
-Route::get('products', [ProductController::class, 'getByType']);
+Route::get('products/{id}', [ProductController::class, 'getByType']);
+Route::post('/products/add', [ProductController::class, 'store']);
+Route::post('/products/addBulk', [ProductController::class, 'storeBulk']);
 
