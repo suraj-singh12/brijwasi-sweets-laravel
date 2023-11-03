@@ -20,6 +20,28 @@ class ProductController extends Controller
       return Product::where('name', $name)->get();
     }
 
+    public function uniqueTypes() {
+//      returning distinct 'type' values
+//      return Product::select('type')->distinct()->get();
+
+//      returning distinct 'type' values except 'logo'
+      return Product::select('type')
+        ->distinct()
+        ->where('type', '!=', 'logo')
+        ->pluck('type');
+    }
+
+    public function uniqueTypeValues() {
+      // returning 1 result from all distinct 'type' values except from 'logo'
+
+      $products = Product::select('id', 'name', 'image', 'type')
+        ->whereNotIn('type', ['logo'])
+        ->whereNotIn('name', ['Festive Gift Sets', '0', ''])
+        ->groupBy('type')
+        ->get();
+      return $products;
+    }
+
     public function store(AddProductRequest $request) {
       $jsonData = json_decode($request->getContent(), true);
       try {

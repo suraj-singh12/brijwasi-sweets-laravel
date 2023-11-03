@@ -32,10 +32,15 @@ Route::post('/signup', [AuthController::class, 'signup']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/products', [ProductController::class, 'index']);
-Route::get('/products/{type}', [ProductController::class, 'getByType']);
+Route::get('/products/types', [ProductController::class, 'uniqueTypes']);
+Route::get('/products/uniqueTypeValues', [ProductController::class, 'uniqueTypeValues']);
 Route::get('/products/name/{name}', [ProductController::class, 'getByName']);
 Route::post('/products/add', [ProductController::class, 'store']);
 Route::post('/products/addBulk', [ProductController::class, 'storeBulk']);
 Route::delete('/products/delete/{id}', [ProductController::class, 'destroy']);
+Route::get('/products/{type}', [ProductController::class, 'getByType']);
 
 Route::get('/public/images/{imageName}', [ProductController::class, 'getImage'])->where('imageName', '.*');
+
+
+
