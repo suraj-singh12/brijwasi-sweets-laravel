@@ -5,14 +5,14 @@ import axiosClient from "../axios-client.js";
 import Header from './Header.jsx';
 import axios from 'axios';
 
-import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ImageCarousel from './ImageCarousel.jsx';
 
 
 export default function DefaultLayout() {
   const { user, setUser, token, setToken, notification } = useStateContext();
   const [products, setProducts] = useState([]);
   const [banners, setBanners] = useState([]);
+  const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
   if (!token) {
     return <Navigate to="/login" />
@@ -37,7 +37,7 @@ export default function DefaultLayout() {
   }, [])
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/products/')
+    axiosClient.get(baseUrl + '/api/products/')
       .then(({ data }) => {
         setProducts(data);
         console.log("products: ", data);
@@ -50,54 +50,13 @@ export default function DefaultLayout() {
       });
   }, []);
 
-  const styles = {
-    icon: {
-      fontSize: '30px',
-      fontWeight: 'bold',
-      color: 'white',
-      padding: '10px',
-      backgroundColor: '#325ca8',
-      borderRadius: '10px',
-      margin: '10px'
-    },
-    button: {
-      margin: '10px',
-      backgroundColor: '#bfe369',
-      borderRadius: '10px',
-      padding: '10px',
-    }
-  }
 
   return (
     <div id="defaultLayout">
       <div className="content">
         <Header />
         <main>
-          <Carousel>
-            <Carousel.Item>
-              <img src="/public/images/milk_cake.png" text="First slide" style={{width: 'auto', height: '200px'}} />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img src="/public/images/kesar.jpg" text="Second slide" />
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img src="/public/images/soan_papdi.png" text="Third slide" />
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+          <ImageCarousel images={banners} />
 
           {/* <Outlet /> */}
         </main>
