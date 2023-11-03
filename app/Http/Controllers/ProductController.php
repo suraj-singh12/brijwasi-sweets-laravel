@@ -16,6 +16,10 @@ class ProductController extends Controller
       return Product::where('type', $type)->get();
     }
 
+    public function getByName($name) {
+      return Product::where('name', $name)->get();
+    }
+
     public function store(AddProductRequest $request) {
       $jsonData = json_decode($request->getContent(), true);
       try {

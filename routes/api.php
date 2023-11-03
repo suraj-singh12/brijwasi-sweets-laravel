@@ -33,6 +33,7 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{type}', [ProductController::class, 'getByType']);
+Route::get('/products/name/{name}', [ProductController::class, 'getByName']);
 Route::post('/products/add', [ProductController::class, 'store']);
 Route::post('/products/addBulk', [ProductController::class, 'storeBulk']);
 Route::delete('/products/delete/{id}', [ProductController::class, 'destroy']);
