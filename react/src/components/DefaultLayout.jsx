@@ -6,13 +6,16 @@ import Header from './Header.jsx';
 import axios from 'axios';
 
 import ImageCarousel from './ImageCarousel.jsx';
+import DisplayProducts from './DisplayProducts.jsx';
+
 
 
 export default function DefaultLayout() {
   const { user, setUser, token, setToken, notification } = useStateContext();
   const [products, setProducts] = useState([]);
   const [banners, setBanners] = useState([]);
-  const baseUrl = import.meta.env.VITE_API_BASE_URL;
+  const [types, setTypes] = useState([]);
+  const apiBaseUrl = import.meta.env.VITE_API_URL;
 
   if (!token) {
     return <Navigate to="/login" />
@@ -37,19 +40,39 @@ export default function DefaultLayout() {
   }, [])
 
   useEffect(() => {
-    axiosClient.get(baseUrl + '/api/products/')
-      .then(({ data }) => {
-        setProducts(data);
-        console.log("products: ", data);
-        return data;
-      })
-      .then((data) => {
-        const banners = data.filter((item) => (item.name === 'Brijwasi'));
-        setBanners(banners);
-        console.log("banners: ", banners);
-      });
+    axiosClient.get(apiBaseUrl + '/products/name/Brijwasi')
+    .then(({data}) => {
+      console.log('banner data: ', data);
+      setBanners(data);
+    })
   }, []);
 
+
+  useEffect(() => {
+    axiosClient.get(apiBaseUrl + '/products/uniqueTypeValues')
+    .then(({data}) => {
+      console.log('unique type values / products: ', data);
+      setProducts(data);
+    })
+  }, [])
+  // useEffect(() => {
+  //   axiosClient.get(baseUrl + '/products/types')
+  //     .then(({ data: types }) => {
+  //       const requests = types.map((type) => {
+  //         return axiosClient.get(baseUrl + `/products/${type}`)
+  //           .then((resp) => resp.data); // Extract the data from the response
+  //       });
+
+  //       return Promise.all(requests);
+  //     })
+  //     .then((data) => {
+  //       console.log('products final: ', data);
+  //       setProducts(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching products:', error);
+  //     });
+  // }, []);
 
   return (
     <div id="defaultLayout">
@@ -57,7 +80,7 @@ export default function DefaultLayout() {
         <Header />
         <main>
           <ImageCarousel images={banners} />
-
+          <DisplayProducts products={products} />
           {/* <Outlet /> */}
         </main>
       </div>
