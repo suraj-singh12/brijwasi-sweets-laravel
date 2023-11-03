@@ -207,14 +207,39 @@ table > tbody > tr > td {
     flex: 1;
 }
 
-#defaultLayout header {
-    height: 80px;
+header {
+    height: 8rem;
     padding: 2rem 3rem;
     background-color: white;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+header a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 10px 5px 10px;
+  margin-right: 10px;
+  border-radius: 0.4rem;
+  border-color: hotpink;
+}
+
+header .logo {
+  height: 5rem;
+  float: left;
+  width: auto;
+}
+
+header .logo > img {
+  height: inherit;
+  width: auto;
+}
+
+header .links {
+  float:right;
 }
 
 #defaultLayout main {
