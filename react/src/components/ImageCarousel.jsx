@@ -12,7 +12,7 @@ export default function ImageCarousel({ images }) {
         if(image.image === '/public/images/logo.png') return null;
         return (
           <Carousel.Item key={index}>
-            <LazyLoadImage src={apiBaseUrl + image.image} alt={image.name} text={image.name} style={{ width: '100%', height: '300px' }} />
+            <LazyLoadImage src={apiBaseUrl + image.image} alt={image.name} text={image.name} style={{ width: '100%', height: '400px' }} />
             <Carousel.Caption>
               <h3>{image.name}</h3>
               <p>Enjoy Delicious Brijwasi Sweets At Home</p>

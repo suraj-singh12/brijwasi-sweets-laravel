@@ -1,0 +1,34 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  transition: all 500ms ease-in-out;
+}
+
+.product {
+  min-width: 27%;
+  width: 27%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  /* ensures that if there are less cards; rest will fill the space automatically */
+  flex-grow: 1;
+  margin-right: 2rem;
+  border: 3.5px solid transparent;
+  transition: all 500ms ease-in-out;
+}
+
+.product:hover {
+  border: 3.5px solid #ED2B73;
+  opacity: 0.8;
+}
+
+.productInfo {
+  background: #ED2B73;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 6px;
+  transition: all 500ms ease-in-out;
+}

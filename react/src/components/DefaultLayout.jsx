@@ -12,9 +12,7 @@ import DisplayProducts from './DisplayProducts.jsx';
 
 export default function DefaultLayout() {
   const { user, setUser, token, setToken, notification } = useStateContext();
-  const [products, setProducts] = useState([]);
   const [banners, setBanners] = useState([]);
-  const [types, setTypes] = useState([]);
   const apiBaseUrl = import.meta.env.VITE_API_URL;
 
   if (!token) {
@@ -40,39 +38,12 @@ export default function DefaultLayout() {
   }, [])
 
   useEffect(() => {
-    axiosClient.get(apiBaseUrl + '/products/name/Brijwasi')
+    axios.get(apiBaseUrl + '/products/name/Brijwasi')
     .then(({data}) => {
       console.log('banner data: ', data);
       setBanners(data);
     })
   }, []);
-
-
-  useEffect(() => {
-    axiosClient.get(apiBaseUrl + '/products/uniqueTypeValues')
-    .then(({data}) => {
-      console.log('unique type values / products: ', data);
-      setProducts(data);
-    })
-  }, [])
-  // useEffect(() => {
-  //   axiosClient.get(baseUrl + '/products/types')
-  //     .then(({ data: types }) => {
-  //       const requests = types.map((type) => {
-  //         return axiosClient.get(baseUrl + `/products/${type}`)
-  //           .then((resp) => resp.data); // Extract the data from the response
-  //       });
-
-  //       return Promise.all(requests);
-  //     })
-  //     .then((data) => {
-  //       console.log('products final: ', data);
-  //       setProducts(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error fetching products:', error);
-  //     });
-  // }, []);
 
   return (
     <div id="defaultLayout">
@@ -80,8 +51,7 @@ export default function DefaultLayout() {
         <Header />
         <main>
           <ImageCarousel images={banners} />
-          <DisplayProducts products={products} />
-          {/* <Outlet /> */}
+          <Outlet />
         </main>
       </div>
       {notification &&

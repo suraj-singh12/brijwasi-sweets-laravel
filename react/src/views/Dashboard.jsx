@@ -1,16 +1,24 @@
 import React, {useEffect, useState} from 'react'
-import imageMapper from "../assets/imageMapper.js";
-import Card from "../components/Card.jsx";
+import axiosClient from '../axios-client';
+import DisplayProducts from '../components/DisplayProducts';
+import Heading from './Heading';
 
 export default function Dashboard() {
-  console.log(imageMapper);
+  const [products, setProducts] = useState([]);
+  const apiBaseUrl = import.meta.env.VITE_API_URL;
+
+  useEffect(() => {
+    axiosClient.get(apiBaseUrl + '/products/uniqueTypeValues')
+    .then(({data}) => {
+      console.log('unique type values / products: ', data);
+      setProducts(data);
+    })
+  }, [])
+
   return (
-    <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gridTemplateRows: '1fr'}}>
-      {
-        imageMapper.map((data, index) => (
-          <Card key={index} data={data} />
-        ))
-      }
-    </div>
+    <>
+      <Heading text={"Our Products"} />
+      <DisplayProducts products={products} />
+    </>
   )
 }
