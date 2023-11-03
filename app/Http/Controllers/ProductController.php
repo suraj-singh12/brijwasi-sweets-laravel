@@ -33,8 +33,9 @@ class ProductController extends Controller
       }
     }
 
-    public function storeBulk(AddProductRequest $request) {
+    public function storeBulk(Request $request) {
       $productData = $request->json();
+//      $productData = $request;
       if(!is_array($productData)) {
         return response()->json(['message' => 'Invalid data'], 400);
       }
@@ -65,5 +66,16 @@ class ProductController extends Controller
       } catch(\Exception $e) {
         return response()->json(['message' => 'Error deleting product'], 500);
       }
+    }
+
+    public function getImage($imageName) {
+      $path = public_path('images/' . $imageName);
+      if(file_exists($path)) {
+        return response()->file($path);
+      } else {
+        $path = public_path('images/' . 'logo.png');   // returning default 'logo.png'
+        return response()->file($path);
+      }
+//      return response()->json(['message' => 'Image not found'], 404);
     }
 }
