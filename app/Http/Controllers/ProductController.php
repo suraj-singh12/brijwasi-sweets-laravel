@@ -52,4 +52,18 @@ class ProductController extends Controller
         return response()->json(['message' => 'Error adding products'], 500);
       }
     }
+
+    public function destroy($id) {
+      try {
+        $product = Product::where('id', $id)->first();
+        if(!$product) {
+          return response()->json(['message' => 'Product not found'], 404);
+        } else {
+          $product->delete();
+          return response()->json(['message' => 'Product deleted'], 200);
+        }
+      } catch(\Exception $e) {
+        return response()->json(['message' => 'Error deleting product'], 500);
+      }
+    }
 }

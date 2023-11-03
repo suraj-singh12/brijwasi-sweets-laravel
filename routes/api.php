@@ -35,6 +35,6 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{id}', [ProductController::class, 'getByType']);
 Route::post('/products/add', [ProductController::class, 'store']);
 Route::post('/products/addBulk', [ProductController::class, 'storeBulk']);
-
+Route::delete('/products/delete/{id}', [ProductController::class, 'destroy']);
 
 
