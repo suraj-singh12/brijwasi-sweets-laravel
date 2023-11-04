@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axiosClient from '../axios-client';
 import styles from './OurProducts.module.css';
 import Heading from '../views/Heading';
+import DisplayProducts from './DisplayProducts';
 
 
 export default function OurProducts() {
   const [types, setTypes] = useState([]);
   const [selectedType, setSelectedType] = useState('combos');
+  const [products, setProducts] = useState([]);
+  const divRef = useRef();
   const apiBaseUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
@@ -18,6 +21,7 @@ export default function OurProducts() {
   }, []);
 
   useEffect(() => {
+    // unhighlight all & highlight the selected option
     const elements = document.querySelectorAll('.selectable');
     elements.forEach((element) => {
       element.style.backgroundColor = 'none';
@@ -26,15 +30,25 @@ export default function OurProducts() {
     if (currentElement) {
       currentElement.style.backgroundColor = 'lightblue';
     }
+
+    // now make the api call to get items of selected type
+    axiosClient.get(apiBaseUrl + '/products/' + selectedType)
+    .then(({data}) => {
+      setProducts(data);
+    })
+    .catch(err => {
+      console.log('error :-|');
+    })
+
+    divRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
   }, [selectedType]);
 
   const handleClick = (type) => {
-    console.log('handle click');
     setSelectedType(type);
   }
 
   return (
-    <div className="container">
+    <div className="container" ref={divRef}>
       <div className={styles.leftContainer}>
         <ul className={styles.ul}>
         {types && types.map((type, index) => {
@@ -49,6 +63,7 @@ export default function OurProducts() {
       </div>
       <div className={styles.rightContainer}>
         <Heading text={selectedType.split('-').join(' ')} />
+        <DisplayProducts products={products} withName={true} />
       </div>
     </div>
   )

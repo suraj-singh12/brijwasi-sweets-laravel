@@ -23,6 +23,8 @@
 
 .leftContainer {
   float: left;
+  position: sticky;
+  top: 4rem;
   width: 30%;
   margin-top: 4rem;
 }

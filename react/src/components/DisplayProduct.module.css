@@ -1,4 +1,4 @@
-.products {
+.products, .products2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -7,7 +7,7 @@
   transition: all 500ms ease-in-out;
 }
 
-.product {
+.product, .product2 {
   min-width: 27%;
   width: 27%;
   max-width: 100%;
@@ -31,4 +31,49 @@
   width: 100%;
   padding: 6px;
   transition: all 500ms ease-in-out;
+}
+
+.product2 .productInfo {
+  text-align: center;
+}
+
+.product2 {
+  width: 40%;
+  position: relative;
+}
+
+/* achieving bottom to up layer on hover on item */
+.product2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: transparent;
+  opacity: 0.7;
+  transition: all 300ms ease-in-out;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.product2:hover::before {
+  background-color: rgba(237, 43, 115, 0.8);
+  height: 100%;
+}
+
+.product2 {
+  position: relative;
+  z-index: 2; /* Place the content above the overlay */
+  border-radius: 1rem;
+}
+
+.product2 div {
+  border-radius: 0 0 10px 10px;
+}
+.product2 img {
+  border-radius: 10px 10px 0 0;
+}
+.productImage2 {
+  width: 100%;
 }

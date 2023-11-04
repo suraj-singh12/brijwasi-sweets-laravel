@@ -82,13 +82,25 @@ class ProductController extends Controller
 
     public function destroy($id) {
       try {
-        $product = Product::where('id', $id)->first();
-        if(!$product) {
-          return response()->json(['message' => 'Product not found'], 404);
-        } else {
+        // delete the first product with id = $id
+
+//        $product = Product::where('id', $id)->first();
+//        if(!$product) {
+//          return response()->json(['message' => 'Product not found'], 404);
+//        } else {
+//          $product->delete();
+//          return response()->json(['message' => 'Product deleted'], 200);
+//        }
+
+
+        // delete all products with id or name or type = $id
+        $products = Product::where('id', $id)
+          ->orWhere('name', $id)
+          ->get();
+        $products->each(function ($product) {
           $product->delete();
-          return response()->json(['message' => 'Product deleted'], 200);
-        }
+        });
+        return response()->json(['message' => 'Product(s) deleted'], 200);
       } catch(\Exception $e) {
         return response()->json(['message' => 'Error deleting product'], 500);
       }
