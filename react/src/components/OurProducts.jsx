@@ -7,6 +7,7 @@ import DisplayProducts from './DisplayProducts';
 
 export default function OurProducts() {
   const [types, setTypes] = useState([]);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
   const [selectedType, setSelectedType] = useState('combos');
   const [products, setProducts] = useState([]);
   const divRef = useRef();
@@ -18,6 +19,7 @@ export default function OurProducts() {
       console.log('OurProducts: ', data);
       setTypes(data);
     });
+    scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -40,11 +42,13 @@ export default function OurProducts() {
       console.log('error :-|');
     })
 
-    divRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
+    if(!isFirstLoad)
+      divRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
   }, [selectedType]);
 
   const handleClick = (type) => {
     setSelectedType(type);
+    setIsFirstLoad(false);
   }
 
   return (

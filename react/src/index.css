@@ -217,7 +217,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-header a {
+header p {
   font-size: 1.1rem;
   text-decoration: none;
   color: black;
@@ -226,6 +226,7 @@ header a {
   margin-right: 10px;
   /* border-radius: 0.4rem; */
   border-color: hotpink;
+  cursor: pointer;
 }
 
 header .logo {
@@ -289,12 +290,13 @@ header .links {
   text-transform: capitalize;
 }
 
-header a {
+header p {
   position: relative;
   margin-right: 3rem;
+  display: inline-block;
 }
 
-header a::before {
+header p::before {
   content: "";
   position: absolute;
   bottom: -2px; /* Adjust this value to control the space */
@@ -305,14 +307,47 @@ header a::before {
   transition: bottom 0.2s ease-in-out;
 }
 
-a:hover::before {
+header p:hover::before {
   bottom: 40px; /* This will move the underline up on hover */
 }
 
-header a:hover {
+header p:hover {
   color: #ED2B73;
   border: 1px solid transparent;
   /* text-decoration: underline; */
   /* text-decoration-skip-ink: none; */
   /* padding-bottom: 4rem; */
+}
+
+footer {
+  margin-top: 2rem;
+  background-image: url('/public/images/footer_bg.jpg');
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+.about-us {
+  flex: 3;
+}
+
+.quick-links, .products, .contact-us {
+  flex: 2;
+}
+
+footer div {
+  width: 20%;;
+}
+
+footer h3 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+footer p {
+  color: white;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }

@@ -13,6 +13,7 @@ export default function Dashboard() {
       console.log('unique type values / products: ', data);
       setProducts(data);
     })
+    scrollTo(0, 0);
   }, [])
 
   return (

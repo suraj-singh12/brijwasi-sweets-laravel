@@ -7,6 +7,7 @@ import axios from 'axios';
 
 import ImageCarousel from './ImageCarousel.jsx';
 import DisplayProducts from './DisplayProducts.jsx';
+import Footer from './Footer.jsx';
 
 
 
@@ -53,6 +54,7 @@ export default function DefaultLayout() {
           <ImageCarousel images={banners} />
           <Outlet />
         </main>
+        <Footer />
       </div>
       {notification &&
         <div className="notification">
