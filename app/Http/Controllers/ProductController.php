@@ -12,6 +12,9 @@ class ProductController extends Controller
       return Product::all();
     }
 
+    public function getById($id) {
+      return Product::where('id', $id)->get();
+    }
     public function getByType($type) {
       return Product::where('type', $type)->get();
     }
