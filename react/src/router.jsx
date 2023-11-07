@@ -8,6 +8,7 @@ import GuestLayout from './components/GuestLayout';
 import Dashboard from './views/Dashboard';
 import UserForm from "./views/UserForm.jsx";
 import OurProducts from './components/OurProducts.jsx';
+import ProductDetail from './components/DetailPage/ProductDetail.jsx';
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
             {
                 path: '/ourProducts',
                 element: <OurProducts />
-            }
+            },
         ]
     },
     {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
                 element: <Signup />
             }
         ]
+    },
+    {
+        path: '/productDetail',
+        element: <ProductDetail />
     },
     {
         path: '*',
