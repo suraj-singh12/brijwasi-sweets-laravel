@@ -35,6 +35,7 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/types', [ProductController::class, 'uniqueTypes']);
 Route::get('/products/uniqueTypeValues', [ProductController::class, 'uniqueTypeValues']);
 Route::get('/products/name/{name}', [ProductController::class, 'getByName']);
+Route::get('/products/id/{id}', [ProductController::class, 'getById'])->where('id', '[0-9]+');
 Route::post('/products/add', [ProductController::class, 'store']);
 Route::post('/products/addBulk', [ProductController::class, 'storeBulk']);
 Route::delete('/products/delete/{id}', [ProductController::class, 'destroy']);
