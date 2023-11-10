@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script&family=EB+Garamond&family=Playfair+Display&family=Space+Mono&family=Young+Serif&display=swap');
+
+.product {
+  cursor: pointer;
+  /* ensures that if there are less cards; rest will fill the space automatically */
+  flex-grow: 1;
+  margin-right: 2rem;
+  border: 3.5px solid transparent;
+  transition: all 500ms ease-in-out;
+}
+.productInfo {
+  background: #ED2B73;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 6px;
+  transition: all 500ms ease-in-out;
+  font-family: 'Dancing Script', cursive;
+}
+
+.product .productInfo {
+  text-align: center;
+}
+
+.product div {
+  border-radius: 0 0 10px 10px;
+}
+.product img {
+  border-radius: 10px 10px 0 0;
+}
+.productImage {
+  width: 100%;
+}
+
+.left {
+  width: 95%;
+  margin: 2rem;
+  /* display: inline-block; */
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  border: 1px solid #ED2B73;
+  padding: 2rem;
+}
+
+.itemImage {
+  width: 30%;
+  /* border: 1px solid #ED2B73; */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.itemImage > img {
+  border-radius: 10px;
+}
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.button {
+  border: 0;
+  background-color: transparent;
+  color: #ED2B73;
+  border: 1px solid #ED2B73;
+  box-shadow: #ED2B73 1.95px 1.95px 2.6px;
+}
+.side {
+  margin: 2rem;
+}

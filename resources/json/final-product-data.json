@@ -1,0 +1,1004 @@
+[
+  {
+    "id": 1,
+    "name": "Brijwasi",
+    "type": "logo",
+    "image": "/public/images/logo.png"
+  },
+  {
+    "id": 2,
+    "name": "Festive Gift Sets",
+    "type": "bengali-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 3,
+    "name": "0",
+    "type": "bengali-sweets",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 4,
+    "name": "0",
+    "type": "bengali-sweets",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 5,
+    "name": "Angoor Vati",
+    "type": "bengali-sweets",
+    "image": "/public/images/01_angoor_vati.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Kesar Rajbhog Rasmalai",
+    "type": "bengali-sweets",
+    "image": "/public/images/02_kesar_rajbhog_rasmalai.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Malai Roll",
+    "type": "bengali-sweets",
+    "image": "/public/images/03_malai_roll.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Kesar Vati",
+    "type": "bengali-sweets",
+    "image": "/public/images/04_kesar_vati.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Malai Chumchum",
+    "type": "bengali-sweets",
+    "image": "/public/images/05_malai_chumchum.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Rajbhog",
+    "type": "bengali-sweets",
+    "image": "/public/images/06_rajbhog.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Rasmalai",
+    "type": "bengali-sweets",
+    "image": "/public/images/07_rasmalai.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Kala Jamun",
+    "type": "bengali-sweets",
+    "image": "/public/images/08_kala_jamun.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Yellow Chumchum",
+    "type": "bengali-sweets",
+    "image": "/public/images/09_yellow_chumchum.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Gulabjamun",
+    "type": "bengali-sweets",
+    "image": "/public/images/10_gulab_jamun.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Rasgulla",
+    "type": "bengali-sweets",
+    "image": "/public/images/11_rasgulla.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Festive Gift Sets",
+    "type": "bengali-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Festive Gift Sets",
+    "type": "combos",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 18,
+    "name": "0",
+    "type": "combos",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 19,
+    "name": "0",
+    "type": "combos",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 20,
+    "name": "Best of Brijwasi",
+    "type": "combos",
+    "image": "/public/images/01_best_of_brijwasi.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Classic Box",
+    "type": "combos",
+    "image": "/public/images/02_classic_box.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Breakfast With Brijwasi",
+    "type": "combos",
+    "image": "/public/images/03_breakfast_with_brijwasi.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Deluxe Box A",
+    "type": "combos",
+    "image": "/public/images/04_deluxe_box_a.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Everyday Is Sunday",
+    "type": "combos",
+    "image": "/public/images/05_everyday_is_sunday.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Deluxe Box B",
+    "type": "combos",
+    "image": "/public/images/06_deluxe_box_b.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Family Combo",
+    "type": "combos",
+    "image": "/public/images/07_family_combo.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Fun Time Combo",
+    "type": "combos",
+    "image": "/public/images/08_fun_time_combo.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Jalebi Fafda",
+    "type": "combos",
+    "image": "/public/images/09_jalebi_fafda.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Festive Gift Sets",
+    "type": "combos",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Festive Gift Sets",
+    "type": "desi-coolers",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 31,
+    "name": "0",
+    "type": "desi-coolers",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 32,
+    "name": "0",
+    "type": "desi-coolers",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 33,
+    "name": "Masala Milk",
+    "type": "desi-coolers",
+    "image": "/public/images/01_masala_milk.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Kesari Lassi",
+    "type": "desi-coolers",
+    "image": "/public/images/02_kesari_lassi.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Mango Lassi",
+    "type": "desi-coolers",
+    "image": "/public/images/03_mango_lassi.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Punjabi Lassi",
+    "type": "desi-coolers",
+    "image": "/public/images/04_punjabi_lassi.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Festive Gift Sets",
+    "type": "desi-coolers",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Festive Gift Sets",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 39,
+    "name": "0",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 40,
+    "name": "0",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 41,
+    "name": "Sugarless Anjeer",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/01_sugerless_anjeer.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Dryfruit Katori",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/02_dryfruit_katori.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Dryfruit Gunjiya",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/03_dryfruit_gunjiya.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Mango Moon",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/04_mango_moon.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Rose Almond Rock",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/05_rose_almond.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Honey Dryfruit Ladoo",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/06_honey_dryfruit_ladoo.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Butterscotch Crunch",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/07_butterscotch_crunch.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Kaju Roll",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/08_kaju_roll.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Kesar Kaju Katli",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/09_kesar_kaju_katli.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Kaju Peda",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/10_kaju_peda.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Choclate Roll",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/11_choclate_roll.jpg"
+  },
+  {
+    "id": 52,
+    "name": "Anjeer Roll",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/12_anjeer_roll.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Chocolate Ball",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/13_chocolate_ball.jpg"
+  },
+  {
+    "id": 54,
+    "name": "Anjeer Chakri",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/14_anjeer_chakri.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Sugarless Khajur",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/15_sugarless_khajur.jpg"
+  },
+  {
+    "id": 56,
+    "name": "Kaju Katli",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/16_kaju_katli.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Festive Gift Sets",
+    "type": "dry-fruits-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Festive Gift Sets",
+    "type": "dryfruits",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 59,
+    "name": "0",
+    "type": "dryfruits",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 60,
+    "name": "0",
+    "type": "dryfruits",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 61,
+    "name": "Walnut",
+    "type": "dryfruits",
+    "image": "/public/images/01_walnut.jpg"
+  },
+  {
+    "id": 62,
+    "name": "Anjeer",
+    "type": "dryfruits",
+    "image": "/public/images/02_anjeer.jpg"
+  },
+  {
+    "id": 63,
+    "name": "Mix Dryfruit",
+    "type": "dryfruits",
+    "image": "/public/images/08_mix_dryfruit.jpg"
+  },
+  {
+    "id": 64,
+    "name": "Kaju",
+    "type": "dryfruits",
+    "image": "/public/images/04_kaju.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Badam",
+    "type": "dryfruits",
+    "image": "/public/images/05_badam.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Kishmish",
+    "type": "dryfruits",
+    "image": "/public/images/06_kishmish.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Masala Kaju",
+    "type": "dryfruits",
+    "image": "/public/images/07_masala_kaju.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Pista",
+    "type": "dryfruits",
+    "image": "/public/images/03_pista.jpg"
+  },
+  {
+    "id": 69,
+    "name": "Festive Gift Sets",
+    "type": "dryfruits",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 70,
+    "name": "Festive Gift Sets",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 71,
+    "name": "0",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 72,
+    "name": "0",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 73,
+    "name": "Choco Walnut Fudge",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/01_choco_walnut_fudge.jpg"
+  },
+  {
+    "id": 74,
+    "name": "Mix Dryfruit Chikki",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/51_mix_dryfruit_chikki.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Crushed Peanut Chikki",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/52_crushed_peanut_chikki.jpg"
+  },
+  {
+    "id": 76,
+    "name": "Diamond Chikki",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/53_diamond_chikki.jpg"
+  },
+  {
+    "id": 77,
+    "name": "Peanut Chikki",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/54_peanut_chikki.jpg"
+  },
+  {
+    "id": 78,
+    "name": "Festive Gift Sets",
+    "type": "fudge-and-chikki",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 79,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/banner_3.jpg"
+  },
+  {
+    "id": 80,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/festive_h.png"
+  },
+  {
+    "id": 81,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/celebration.png"
+  },
+  {
+    "id": 82,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/banner_4.jpg"
+  },
+  {
+    "id": 83,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/festive_h.png"
+  },
+  {
+    "id": 84,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/celebration.png"
+  },
+  {
+    "id": 85,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/banner_2.jpg"
+  },
+  {
+    "id": 86,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/festive_h.png"
+  },
+  {
+    "id": 87,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/celebration.png"
+  },
+  {
+    "id": 88,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/banner_1.jpg"
+  },
+  {
+    "id": 89,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/festive_h.png"
+  },
+  {
+    "id": 90,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/celebration.png"
+  },
+  {
+    "id": 91,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/banner_5.jpg"
+  },
+  {
+    "id": 92,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/festive_h.png"
+  },
+  {
+    "id": 93,
+    "name": "Brijwasi",
+    "type": "home-page",
+    "image": "/public/images/celebration.png"
+  },
+  {
+    "id": 94,
+    "name": "0",
+    "type": "home-page",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 95,
+    "name": "0",
+    "type": "home-page",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 96,
+    "name": "Dry Fruits Sweets",
+    "type": "home-page",
+    "image": "/public/images/Dry-Fruits-Sweets.jpg"
+  },
+  {
+    "id": 97,
+    "name": "Milk Sweets",
+    "type": "home-page",
+    "image": "/public/images/Milk-Sweets.jpg"
+  },
+  {
+    "id": 98,
+    "name": "Bengali Sweets",
+    "type": "home-page",
+    "image": "/public/images/Bengali-Sweets.jpg"
+  },
+  {
+    "id": 99,
+    "name": "Desi Coolers",
+    "type": "home-page",
+    "image": "/public/images/punjabi_lassi.jpg"
+  },
+  {
+    "id": 100,
+    "name": "Combos",
+    "type": "home-page",
+    "image": "/public/images/combos.jpg"
+  },
+  {
+    "id": 101,
+    "name": "Mawa and Desi Ghee Sweets",
+    "type": "home-page",
+    "image": "/public/images/Mawa-Sweets.jpg"
+  },
+  {
+    "id": 102,
+    "name": "Shrikhand",
+    "type": "home-page",
+    "image": "/public/images/shrikhand.jpg"
+  },
+  {
+    "id": 103,
+    "name": "Fudge And Chikki",
+    "type": "home-page",
+    "image": "/public/images/fudge_and_chikki.jpg"
+  },
+  {
+    "id": 104,
+    "name": "Dry-Fruits",
+    "type": "home-page",
+    "image": "/public/images/Dry-Fruits.jpg"
+  },
+  {
+    "id": 105,
+    "name": "0",
+    "type": "home-page",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 106,
+    "name": "0",
+    "type": "home-page",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 107,
+    "name": "",
+    "type": "home-page",
+    "image": "/public/images/Products-Range.png"
+  },
+  {
+    "id": 108,
+    "name": "",
+    "type": "home-page",
+    "image": "/public/images/Happy-Customers.png"
+  },
+  {
+    "id": 109,
+    "name": "",
+    "type": "home-page",
+    "image": "/public/images/Our-Branches.png"
+  },
+  {
+    "id": 110,
+    "name": "",
+    "type": "home-page",
+    "image": "/public/images/Years-In-Service.png"
+  },
+  {
+    "id": 111,
+    "name": "Namkeen",
+    "type": "home-page",
+    "image": "/public/images/namkeen_banner.jpg"
+  },
+  {
+    "id": 112,
+    "name": "Festive Gift Sets",
+    "type": "mawa-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 113,
+    "name": "0",
+    "type": "mawa-sweets",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 114,
+    "name": "0",
+    "type": "mawa-sweets",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 115,
+    "name": "Motichoor Ladoo",
+    "type": "mawa-sweets",
+    "image": "/public/images/01_sp_motichoor_ladoo.jpg"
+  },
+  {
+    "id": 116,
+    "name": "Dryfruit Badami Halwa",
+    "type": "mawa-sweets",
+    "image": "/public/images/02_sp_dryfruit_badami_halwa.jpg"
+  },
+  {
+    "id": 117,
+    "name": "Maharaja Halwa",
+    "type": "mawa-sweets",
+    "image": "/public/images/03_maharaja_halwa.jpg"
+  },
+  {
+    "id": 118,
+    "name": "Motichoor Ladoo",
+    "type": "mawa-sweets",
+    "image": "/public/images/04_motichoor_ladoo.jpg"
+  },
+  {
+    "id": 119,
+    "name": "Sohanpapdi",
+    "type": "mawa-sweets",
+    "image": "/public/images/05_sohanpapdi.jpg"
+  },
+  {
+    "id": 120,
+    "name": "Besan Ladoo",
+    "type": "mawa-sweets",
+    "image": "/public/images/06_besan_ladoo.jpg"
+  },
+  {
+    "id": 121,
+    "name": "Chandrakala",
+    "type": "mawa-sweets",
+    "image": "/public/images/07_chandrakala.jpg"
+  },
+  {
+    "id": 122,
+    "name": "Maisoor Pak",
+    "type": "mawa-sweets",
+    "image": "/public/images/08_maisoor_pak.jpg"
+  },
+  {
+    "id": 123,
+    "name": "Gunjiya",
+    "type": "mawa-sweets",
+    "image": "/public/images/09_gunjiya.jpg"
+  },
+  {
+    "id": 124,
+    "name": "Ice Halwa",
+    "type": "mawa-sweets",
+    "image": "/public/images/10_ice_halwa.jpg"
+  },
+  {
+    "id": 125,
+    "name": "Jalebi",
+    "type": "mawa-sweets",
+    "image": "/public/images/11_jalebi.jpg"
+  },
+  {
+    "id": 126,
+    "name": "Meethi Boondi",
+    "type": "mawa-sweets",
+    "image": "/public/images/12_meethi_boondi.jpg"
+  },
+  {
+    "id": 127,
+    "name": "White Peda",
+    "type": "mawa-sweets",
+    "image": "/public/images/51_white_peda.jpg"
+  },
+  {
+    "id": 128,
+    "name": "Chocolate Barfi",
+    "type": "mawa-sweets",
+    "image": "/public/images/52_chocolate_barfi.jpg"
+  },
+  {
+    "id": 129,
+    "name": "Kesari Peda",
+    "type": "mawa-sweets",
+    "image": "/public/images/53_kesari_peda.jpg"
+  },
+  {
+    "id": 130,
+    "name": "Mawa Barfi",
+    "type": "mawa-sweets",
+    "image": "/public/images/54_mawa_barfi.jpg"
+  },
+  {
+    "id": 131,
+    "name": "Festive Gift Sets",
+    "type": "mawa-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 132,
+    "name": "Festive Gift Sets",
+    "type": "milk-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 133,
+    "name": "0",
+    "type": "milk-sweets",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 134,
+    "name": "0",
+    "type": "milk-sweets",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 135,
+    "name": "Amrut Peda",
+    "type": "milk-sweets",
+    "image": "/public/images/01_amrut_peda.jpg"
+  },
+  {
+    "id": 136,
+    "name": "Double Decker",
+    "type": "milk-sweets",
+    "image": "/public/images/02_double_decker.jpg"
+  },
+  {
+    "id": 137,
+    "name": "Golden Cake",
+    "type": "milk-sweets",
+    "image": "/public/images/03_golden_cake.jpg"
+  },
+  {
+    "id": 138,
+    "name": "Golden Peda",
+    "type": "milk-sweets",
+    "image": "/public/images/04_golden_peda.jpg"
+  },
+  {
+    "id": 139,
+    "name": "Kalakand",
+    "type": "milk-sweets",
+    "image": "/public/images/05_kalakand.jpg"
+  },
+  {
+    "id": 140,
+    "name": "Malai Peda",
+    "type": "milk-sweets",
+    "image": "/public/images/06_malai_peda.jpg"
+  },
+  {
+    "id": 141,
+    "name": "Malai Dodha",
+    "type": "milk-sweets",
+    "image": "/public/images/07_malai_dodha.jpg"
+  },
+  {
+    "id": 142,
+    "name": "Festive Gift Sets",
+    "type": "milk-sweets",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 143,
+    "name": "Festive Gift Sets",
+    "type": "shrikhand",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 144,
+    "name": "0",
+    "type": "shrikhand",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 145,
+    "name": "0",
+    "type": "shrikhand",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 146,
+    "name": "Mango Shrikhand",
+    "type": "shrikhand",
+    "image": "/public/images/01_mango_shrikhand.jpg"
+  },
+  {
+    "id": 147,
+    "name": "Royal Pista Kulfi Shrikhand",
+    "type": "shrikhand",
+    "image": "/public/images/02_royal_pista_kulfi_shrikhand.jpg"
+  },
+  {
+    "id": 148,
+    "name": "Elaichi Shrikhand",
+    "type": "shrikhand",
+    "image": "/public/images/04_elaichi_shrikhand.jpg"
+  },
+  {
+    "id": 149,
+    "name": "Kesar Shrikhand",
+    "type": "shrikhand",
+    "image": "/public/images/03_kesar_shrikhand.jpg"
+  },
+  {
+    "id": 150,
+    "name": "Rose Shrikhand",
+    "type": "shrikhand",
+    "image": "/public/images/05_rose_shrikhand.jpg"
+  },
+  {
+    "id": 151,
+    "name": "Festive Gift Sets",
+    "type": "shrikhand",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 152,
+    "name": "Festive Gift Sets",
+    "type": "snacks",
+    "image": "/public/images/side_ad.jpg"
+  },
+  {
+    "id": 153,
+    "name": "0",
+    "type": "snacks",
+    "image": "/public/images/heading_left.png"
+  },
+  {
+    "id": 154,
+    "name": "0",
+    "type": "snacks",
+    "image": "/public/images/heading_right.png"
+  },
+  {
+    "id": 155,
+    "name": "Bread Pakoda",
+    "type": "snacks",
+    "image": "/public/images/01_bread_pakoda.jpg"
+  },
+  {
+    "id": 156,
+    "name": "Khaman Dhokla",
+    "type": "snacks",
+    "image": "/public/images/02_khaman_dhokla.jpg"
+  },
+  {
+    "id": 157,
+    "name": "Khandvi",
+    "type": "snacks",
+    "image": "/public/images/03_khandvi.jpg"
+  },
+  {
+    "id": 158,
+    "name": "Kothmir Vadi",
+    "type": "snacks",
+    "image": "/public/images/04_kothmir_vadi.jpg"
+  },
+  {
+    "id": 159,
+    "name": "Moongdal Kachori",
+    "type": "snacks",
+    "image": "/public/images/05_moongdal_kachori.jpg"
+  },
+  {
+    "id": 160,
+    "name": "Paneer Dhokla",
+    "type": "snacks",
+    "image": "/public/images/06_paneer_dhokla.jpg"
+  },
+  {
+    "id": 161,
+    "name": "Paneer Puff",
+    "type": "snacks",
+    "image": "/public/images/07_paneer_puff.jpg"
+  },
+  {
+    "id": 162,
+    "name": "Patra",
+    "type": "snacks",
+    "image": "/public/images/08_patra.jpg"
+  },
+  {
+    "id": 163,
+    "name": "Sabudana Vada",
+    "type": "snacks",
+    "image": "/public/images/09_sabudana_vada.jpg"
+  },
+  {
+    "id": 164,
+    "name": "Samosa",
+    "type": "snacks",
+    "image": "/public/images/10_samosa.jpg"
+  },
+  {
+    "id": 165,
+    "name": "Vada Pav",
+    "type": "snacks",
+    "image": "/public/images/11_vada_pav.jpg"
+  },
+  {
+    "id": 166,
+    "name": "Veg Puff",
+    "type": "snacks",
+    "image": "/public/images/12_veg_puff.jpg"
+  },
+  {
+    "id": 167,
+    "name": "Festive Gift Sets",
+    "type": "snacks",
+    "image": "/public/images/side_ad.jpg"
+  }
+]

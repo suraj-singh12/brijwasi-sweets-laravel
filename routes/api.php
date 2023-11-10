@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,18 @@ Route::middleware('auth:sanctum')->group(function() {
 
 Route::post('/signup', [AuthController::class, 'signup']);
 Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/types', [ProductController::class, 'uniqueTypes']);
+Route::get('/products/uniqueTypeValues', [ProductController::class, 'uniqueTypeValues']);
+Route::get('/products/name/{name}', [ProductController::class, 'getByName']);
+Route::get('/products/id/{id}', [ProductController::class, 'getById'])->where('id', '[0-9]+');
+Route::post('/products/add', [ProductController::class, 'store']);
+Route::post('/products/addBulk', [ProductController::class, 'storeBulk']);
+Route::delete('/products/delete/{id}', [ProductController::class, 'destroy']);
+Route::get('/products/{type}', [ProductController::class, 'getByType']);
+
+Route::get('/public/images/{imageName}', [ProductController::class, 'getImage'])->where('imageName', '.*');
+
+
+

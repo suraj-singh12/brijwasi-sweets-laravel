@@ -7,6 +7,8 @@ import DefaultLayout from './components/DefaultLayout';
 import GuestLayout from './components/GuestLayout';
 import Dashboard from './views/Dashboard';
 import UserForm from "./views/UserForm.jsx";
+import OurProducts from './components/OurProducts.jsx';
+import ProductDetail from './components/DetailPage/ProductDetail.jsx';
 
 const router = createBrowserRouter([
     {
@@ -15,24 +17,16 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Navigate to="/users" />,
+                element: <Navigate to="/dashboard" />,
             },
             {
                 path: '/dashboard',
                 element: <Dashboard />
             },
             {
-                path: '/users',
-                element: <Users />
+                path: '/ourProducts',
+                element: <OurProducts />
             },
-            {
-              path: '/users/new',
-              element: <UserForm key="userCreate"/>
-            },
-            {
-              path: '/users/:id',
-              element: <UserForm key="userUpdate"/>
-            }
         ]
     },
     {
@@ -48,6 +42,10 @@ const router = createBrowserRouter([
                 element: <Signup />
             }
         ]
+    },
+    {
+        path: '/productDetail',
+        element: <ProductDetail />
     },
     {
         path: '*',

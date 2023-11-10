@@ -28,3 +28,6 @@ class Handler extends ExceptionHandler
         });
     }
 }
+// command: create laravel app command using composer: laravel new  app-name       or  composer create-project laravel/laravel app-name
+
+

@@ -1,12 +1,22 @@
-import React, {useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Navigate, Outlet } from 'react-router-dom'
 import { useStateContext } from '../contexts/ContextProvider'
 import axiosClient from "../axios-client.js";
+import Header from './Header.jsx';
+import axios from 'axios';
+
+import ImageCarousel from './ImageCarousel.jsx';
+import DisplayProducts from './DisplayProducts.jsx';
+import Footer from './Footer.jsx';
+
+
 
 export default function DefaultLayout() {
-  const {user, setUser, token, setToken, notification} = useStateContext();
+  const { user, setUser, token, setToken, notification } = useStateContext();
+  const [banners, setBanners] = useState([]);
+  const apiBaseUrl = import.meta.env.VITE_API_URL;
 
-  if(!token) {
+  if (!token) {
     return <Navigate to="/login" />
   }
 
@@ -23,32 +33,30 @@ export default function DefaultLayout() {
   // get user info on component mounting
   useEffect(() => {
     axiosClient.get('/user')
-      .then(({data}) => {
+      .then(({ data }) => {
         setUser(data);
       })
   }, [])
 
+  useEffect(() => {
+    axios.get(apiBaseUrl + '/products/name/Brijwasi')
+    .then(({data}) => {
+      console.log('banner data: ', data);
+      setBanners(data);
+    })
+  }, []);
+
   return (
     <div id="defaultLayout">
-        <aside>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/users">Users</Link>
-        </aside>
-        <div className="content">
-            <header>
-                <div>
-                    Header
-                </div>
-                <div>
-                    {user.name}
-                    <a href="#" onClick={onLogout} className="btn-logout">Logout</a>
-                </div>
-            </header>
-            <main>
-              <Outlet />
-            </main>
-        </div>
-      { notification &&
+      <div className="content">
+        <Header />
+        <main>
+          <ImageCarousel images={banners} />
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+      {notification &&
         <div className="notification">
           {notification}
         </div>

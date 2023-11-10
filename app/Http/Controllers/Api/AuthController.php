@@ -16,33 +16,30 @@ class AuthController extends Controller
 
         /** @var User $user */
         $user = User::create([
-            'name' => $data['name'],
+            'name' => ucFirst($data['name']),
             'email' => $data['email'],
             'password' => bcrypt($data['password'])
         ]);
         $token = $user->createToken('main')->plainTextToken;
-        // return response([
-            //     'user' => $user,
-            //     'token' => $token,
-            // ]);
-            return response(compact('user', 'token'));
+        return response(compact('user', 'token'));
+    }
+    public function login(LoginRequest $request) {
+        $credentials = $request->validated();
+        if(!Auth::attempt($credentials)) {
+            return response([
+                'message' => 'Provided password is incorrect'
+            ], 422);
         }
-        public function login(LoginRequest $request) {
-            $credentials = $request->validated();
-            if(!Auth::attempt($credentials)) {
-                return response([
-                    'message' => 'Provided password is incorrect'
-                ], 422);
-            }
-            /** @var User $user */
-            $user = Auth::user();
-            $token = $user->createToken('main')->plainTextToken;
-            return response(compact('user', 'token'));
-        }
-        public function logout(Request $request) {
-            /** @var User $user */
-            $user = $request->user();
-            $user->currentAccessToken()->delete();
-            return response('', 204);
-        }
+        /** @var User $user */
+        $user = Auth::user();
+        $token = $user->createToken('main')->plainTextToken;
+        return response(compact('user', 'token'));
+    }
+    public function logout(Request $request) {
+        /** @var User $user */
+        $user = $request->user();
+//        $user = Auth::user();   // the same as above
+        $user->currentAccessToken()->delete();
+        return response('', 204);
+    }
 }

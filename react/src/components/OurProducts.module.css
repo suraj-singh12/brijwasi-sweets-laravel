@@ -1,0 +1,41 @@
+
+.li {
+  text-transform: capitalize;
+  font-size: 15px;
+  line-height: 30px;
+  color: #5c5c5c;
+  border: 1px solid #ED2B73;
+  padding: 7px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 500ms ease-out;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.li:hover {
+  color: #fff;
+  border: 1px solid #ED2B73;
+  background: #ED2B73;
+}
+
+.leftContainer {
+  float: left;
+  position: sticky;
+  top: 4rem;
+  width: 30%;
+  margin-top: 4rem;
+}
+
+.ul {
+  width: 60%;
+  margin: auto;
+}
+
+.rightContainer {
+  display: inline-block;
+  width: 60%;
+  margin-top: 2rem;
+}

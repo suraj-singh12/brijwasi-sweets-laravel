@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script&family=EB+Garamond&family=Playfair+Display&family=Space+Mono&family=Young+Serif&display=swap');
 
 * {
     box-sizing: border-box;
@@ -73,7 +75,8 @@ input:focus {
 
 .btn-logout {
     text-decoration: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.55rem 1rem;
+    background-color: #b72424;
     color: #212121;
     transition: all 0.3s;
     border-radius: 6px;
@@ -205,8 +208,8 @@ table > tbody > tr > td {
     flex: 1;
 }
 
-#defaultLayout header {
-    height: 80px;
+header {
+    height: 8rem;
     padding: 2rem 3rem;
     background-color: white;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -214,9 +217,35 @@ table > tbody > tr > td {
     justify-content: space-between;
     align-items: center;
 }
+header p {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  /* border: 1px solid black; */
+  padding: 5px 10px 5px 10px;
+  margin-right: 10px;
+  /* border-radius: 0.4rem; */
+  border-color: hotpink;
+  cursor: pointer;
+}
+
+header .logo {
+  height: 5rem;
+  float: left;
+  width: auto;
+}
+
+header .logo > img {
+  height: inherit;
+  width: auto;
+}
+
+header .links {
+  float:right;
+}
 
 #defaultLayout main {
-    padding: 2rem;
+    padding: 0.1rem;
 }
 
 .animated {
@@ -240,4 +269,85 @@ table > tbody > tr > td {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.heading h2 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #ED2B73;
+  margin-bottom: 20px;
+  margin-top: 2%;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+header p {
+  position: relative;
+  margin-right: 3rem;
+  display: inline-block;
+}
+
+header p::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust this value to control the space */
+  left: 0;
+  right: 0;
+  height: 2px; /* Adjust this value to control the thickness */
+  background-color: #ED2B73; /* Adjust the color as needed */
+  transition: bottom 0.2s ease-in-out;
+}
+
+header p:hover::before {
+  bottom: 40px; /* This will move the underline up on hover */
+}
+
+header p:hover {
+  color: #ED2B73;
+  border: 1px solid transparent;
+  /* text-decoration: underline; */
+  /* text-decoration-skip-ink: none; */
+  /* padding-bottom: 4rem; */
+}
+
+footer {
+  margin-top: 2rem;
+  background-image: url('/public/images/footer_bg.jpg');
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+.about-us {
+  flex: 3;
+}
+
+.quick-links, .products, .contact-us {
+  flex: 2;
+}
+
+footer div {
+  width: 20%;;
+}
+
+footer h3 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+footer p {
+  color: white;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
