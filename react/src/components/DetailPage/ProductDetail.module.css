@@ -65,6 +65,10 @@
   color: #ED2B73;
   border: 1px solid #ED2B73;
   box-shadow: #ED2B73 1.95px 1.95px 2.6px;
+  margin-bottom: 1rem;
+}
+.button:first-child {
+  box-shadow: #cf9baf 1.95px 1.95px 2.6px;
 }
 .side {
   margin: 2rem;

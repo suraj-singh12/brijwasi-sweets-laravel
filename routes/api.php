@@ -25,6 +25,7 @@ Route::middleware('auth:sanctum')->group(function() {
   });
   // this route is used to logout user
   Route::post('/logout', [AuthController::class, 'logout']);
+//  Route::apiResource('/users', UserController::class);
   Route::apiResource('/users', UserController::class);
 });
 

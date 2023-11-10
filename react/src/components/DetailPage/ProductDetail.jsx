@@ -8,15 +8,17 @@ import Footer from '../Footer';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-
+import { useNavigate } from 'react-router-dom';
 import styles from './ProductDetail.module.css';
 
 export default function ProductDetail() {
-  const { user, setUser, token, setToken, notification } = useStateContext();
+  const { user, setUser, notification, setNotification } = useStateContext();
   const i = useLocation().state.product;
   const [item, setItem] = useState(i);
   const [products, setProducts] = useState([]);
+  const [bag, setBag] = useState([]);
   const apiBaseUrl = import.meta.env.VITE_API_URL;
+  const navigateTo = useNavigate();
 
 
   // get user info on component mounting
@@ -44,6 +46,23 @@ export default function ProductDetail() {
     setItem(product);
   }
 
+  const handleBag = (item) => {
+    setNotification(`"${item.name}" added to bag`);
+    
+    setBag([...bag, item]);
+  }
+
+  const handleBuy = () => {
+    localStorage.setItem('bag', JSON.stringify(bag));
+    setNotification(`"${item.name}" added to bag`);
+    setTimeout(() => {
+      setNotification('Redirecting to checkout page...');
+    }, 1000);
+    setTimeout(() => {
+      navigateTo('/checkout');
+    }, 3000)
+  }
+
   return (
     item && <div className="mainProduct">
       <Header />
@@ -54,8 +73,10 @@ export default function ProductDetail() {
               <img src={apiBaseUrl + item.image} alt={`${item.image}`} style={{ width: '100%', height: '250px' }} preload={'auto'} />
             </div>
             <div className={styles.itemInfo}>
-              <p style={{ textTransform: 'capitalize' }}> ~ {item.name} ~</p>
-              <button className={styles.button}>Buy Now</button>
+              <p style={{ textTransform: 'capitalize', marginBottom: '0' }}> ~ {item.name} ~ </p>
+              <p style={{ fontSize: '1rem', textAlign: 'center', marginTop: '0'}}>[ &#8377; 459 ]</p>
+              <button className={styles.button} onClick={() => handleBag(item)}>Add to Bag</button>
+              <button className={styles.button} onClick={handleBuy}>Buy Now</button>
             </div>
           </div>
         }
@@ -75,6 +96,10 @@ export default function ProductDetail() {
             )
           })}
         </OwlCarousel>
+        {notification &&
+        <div className="notification">
+          {notification}
+        </div>}
       </div>
       <Footer />
     </div>
